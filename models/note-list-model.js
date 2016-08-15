@@ -1,4 +1,4 @@
-var Note = require('./note-model')
+var Note = require('./note-model');
 
 function NoteList(){
   this._notes = [];
