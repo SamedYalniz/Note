@@ -8,5 +8,5 @@
     return this.text;
   };
 
-  module.exports = Note;
+  exports.Note = Note;
 })(this);

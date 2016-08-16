@@ -9,7 +9,23 @@
     <div id="app">
       hello
     </div>
-    
-  <script type="text/javascript" src="note-controller.js"></script>
+
+
+  <script src="note-controller.js"></script>
+  <script src="./src/models/note-list-model.js"></script>
+  <script src="./src/models/note-model.js"></script>
+  <script src="./src/views/note-list-view.js"></script>
+  <script>
+  var note = Note;
+  var noteList = new NoteList(note);
+  var noteController = new NoteController(noteList);
+  var noteListView = new NoteListView(noteList);
+   noteController.getNoteList().storeNote("Favourite drink: seltzer");
+
+  noteController.setUpNoteListView(noteListView);
+  noteController.noteListToHTML();
+  </script>
+
+
   </body>
 </html>
