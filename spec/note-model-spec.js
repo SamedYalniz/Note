@@ -1,9 +1,11 @@
 function createsANote() {
+  resetNoteIDs();
   var note = new Note("My favourite language is Ruby");
   assert.isTrue("creates a note", note.readNote() === "My favourite language is Ruby");
 }
 
 function uniqueIdForEachNote() {
+  resetNoteIDs();
   var note = new Note();
   var note_two = new Note();
   assert.isTrue("first note has id 0", note.id() === 2);
@@ -11,6 +13,7 @@ function uniqueIdForEachNote() {
 }
 
 function resetsTheIds() {
+  resetNoteIDs();
   var note = new Note();
   note.resetIDs();
   var note_two = new Note();

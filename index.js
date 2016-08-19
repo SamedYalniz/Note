@@ -4,3 +4,6 @@ controller._list.addNote("My favourite drink: seltzer");
 controller._list.addNote("My favourite food: burger");
 controller.setUpNoteListView();
 controller.HTMLToApp();
+
+
+controller.changeContentForCurrentNote();
